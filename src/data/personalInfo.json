@@ -1,0 +1,22 @@
+{
+  "name": "Kalkidan Birhanu",
+  "age": 23,
+  "nationality": "Ethiopian",
+  "passions": "Creative & Artistic, Music & Football",
+  "experience": "2+ years",
+  "about_p1": "I'm a 23 Year old Ethiopian artist whose passions are all things Creative & Artistic, Music & Football.",
+  "about_p2": "I've worked in the industry for 2+ years, creating a myriad of multimedia content for various clients, large & small.",
+  "about_p3": "I wear many hats, I'm a Creative/Art Director & Multimedia Designer that can strategize, plan, manage, craft and execute virtually anything for any brand.",
+  "resumeUrl": "/path/to/your/resume.pdf",
+  "socialLinks": [
+    { "name": "Email", "url": "mailto:bkalkidan982@gmail.com" },
+    { "name": "YouTube", "url": "https://www.youtube.com/@kalkidanBirhanu-g3p" },
+    { "name": "LinkedIn", "url": "https://www.linkedin.com/in/kalkidan-birhanu/" }
+  ],
+  "youtube": {
+      "channelName": "Kalkidan Birhanu",
+      "channelUrl": "https://www.youtube.com/@kalkidanBirhanu-g3p",
+      "logo": "/assets/Youtube Logo.png",
+      "subscribers": "9 subscribers"
+  }
+}

@@ -1,0 +1,25 @@
+/* src/index.css */
+@import url('https://fonts.googleapis.com/css2?family=Lato:ital,wght@0,100;0,300;0,400;0,700;0,900;1,100;1,300;1,400;1,700;1,900&family=Orbitron:wght@400..900&family=Oxanium:wght@200..800&display=swap');
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+/* Your custom global styles */
+body {
+    scrollbar-width: thin;
+    scrollbar-color: hsl(47, 100%, 50%) #0B0B0B;
+}
+
+::-webkit-scrollbar {
+    width: 6px;
+    height: 6px;
+}
+::-webkit-scrollbar-track {
+    background: #0B0B0B;
+}
+::-webkit-scrollbar-thumb {
+    background-color: hsla(47, 100%, 50%, 0.70);
+    border-radius: 100vw;
+    border: 1px solid #0B0B0B;
+}
