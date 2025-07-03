@@ -5,7 +5,7 @@ import projectsData from "../data/projects.json";
 import VideoCard from "../components/VideoCard";
 import type { Project, ProjectCategory } from "../types";
 
-const projects: Project[] = projectsData;
+const projects: Project[] = projectsData as Project[];
 const categories: (ProjectCategory | "All")[] = [
   "All",
   "Corporate Videos",
@@ -38,10 +38,8 @@ export default function WorksPage() {
     return projects.filter((p) => p.category === activeFilter);
   }, [activeFilter]);
 
-  // Define the class for the horizontally scrolling container
   const scrollContainerClasses = "flex items-stretch gap-4 overflow-x-auto p-4";
 
-  // Define the class for the responsive grid container
   const gridLayoutClass = "grid grid-cols-responsive gap-4";
 
   return (
@@ -81,7 +79,6 @@ export default function WorksPage() {
           {/* Video Sections */}
           <div className="flex flex-col gap-12">
             {activeFilter === "All" ? (
-              // RENDER THE SCROLLING "FILMSTRIP" VIEW
               Object.entries(projectsByCategory).map(
                 ([category, projectList]) => {
                   if (projectList.length === 0) return null;
@@ -99,8 +96,7 @@ export default function WorksPage() {
                   );
                 }
               )
-            ) : // RENDER THE RESPONSIVE GRID VIEW
-            filteredProjects.length > 0 ? (
+            ) : filteredProjects.length > 0 ? (
               <div className="grid content-center">
                 <h2 className="ps-3 text-left text-lg lg:text-2xl font-Oxanium text-primary-white">
                   {activeFilter}
@@ -112,7 +108,6 @@ export default function WorksPage() {
                 </div>
               </div>
             ) : (
-              // RENDER THE "EMPTY" MESSAGE
               <div className="flex flex-col gap-4 items-center justify-center text-paragraph py-10">
                 <p className="ps-3 text-sm lg:text-lg font-Lato">
                   Oops! Looks like it's empty here.
@@ -150,7 +145,6 @@ export default function WorksPage() {
       <section className="flex items-center justify-center pt-4 pb-16 h-fit">
         <div className="w-11/12 flex flex-col sm:items-center lg:flex-row-reverse gap-8 lg:justify-center lg:gap-36">
           <div className="flex items-center justify-center">
-            {/* ... Large SVG Illustration ... */}
             <svg
               width="339"
               height="205"
@@ -292,5 +286,3 @@ export default function WorksPage() {
     </>
   );
 }
-
-// in this there is a problem can u fix it the problem is in the cta section the svg is not implemented and also when i filter in some cases it shows me an error and i think it is becaus i dont have contents in some categories so fix all of that and it should be like if there is no categories with content it does nt have to show that empty section and if the content in a category is one it must adjust it self in the scrolable section

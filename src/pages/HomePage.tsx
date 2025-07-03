@@ -1,10 +1,13 @@
-import useSetTitle from "../hooks/useSetTitle";
 import { Link } from "react-router-dom";
+import useSetTitle from "../hooks/useSetTitle";
 import personalInfo from "../data/personalInfo.json";
-import projects from "../data/projects.json";
+import projectsData from "../data/projects.json";
 import VideoCard from "../components/VideoCard";
+import type { Project } from "../types";
 
-const featuredProjects = projects.slice(0, 3); // Show first 3 projects
+const allProjects: Project[] = projectsData as Project[];
+
+const featuredProjects = allProjects.slice(0, 3);
 
 export default function HomePage() {
   useSetTitle("Kalkidan Birhanu | Creative Portfolio");
@@ -36,25 +39,22 @@ export default function HomePage() {
               width="51"
               height="50"
               viewBox="0 0 51 50"
-              fill="none"
+              fill="currentColor"
               xmlns="http://www.w3.org/2000/svg"
             >
-              <path
-                d="M42.5 25C42.5 34.4 34.9 42 25.5 42C16.1 42 8.5 34.4 8.5 25C8.5 15.6 16.1 8 25.5 8C34.9 8 42.5 15.6 42.5 25ZM10.5 25C10.5 33.3 17.2 40 25.5 40C33.8 40 40.5 33.3 40.5 25C40.5 16.7 33.8 10 25.5 10C17.2 10 10.5 16.7 10.5 25Z"
-                fill="white"
-              />
-              <path
-                d="M34.9001 25L25.2001 34.7L23.8 33.3L32.1 25L23.8 16.7L25.2 15.2999L34.9001 25Z"
-                fill="white"
-              />
-              <path
-                d="M16.5 26L16.5 24L33.5 24L33.5 26L16.5 26Z"
-                fill="white"
-              />
+              <path d="M42.5 25C42.5 34.4 34.9 42 25.5 42C16.1 42 8.5 34.4 8.5 25C8.5 15.6 16.1 8 25.5 8C34.9 8 42.5 15.6 42.5 25ZM10.5 25C10.5 33.3 17.2 40 25.5 40C33.8 40 40.5 33.3 40.5 25C40.5 16.7 33.8 10 25.5 10C17.2 10 10.5 16.7 10.5 25Z" />
+              <path d="M34.9001 25L25.2001 34.7L23.8 33.3L32.1 25L23.8 16.7L25.2 15.2999L34.9001 25Z" />
+              <path d="M16.5 26L16.5 24L33.5 24L33.5 26L16.5 26Z" />
             </svg>
           </Link>
         </div>
-        {/* ... scroll indicator ... */}
+        <div className="flex items-center justify-center text-center gap-1 absolute bottom-[35px] sm:bottom-[70px] -right-[20px] sm:-right-[8px] rotate-90">
+          <div className="bg-primary-white rounded-lg h-[2px] w-3 sm:w-6"></div>
+          <p className="font-Oxanium font-extralight text-base text-primary-white">
+            scroll
+          </p>
+          <div className="bg-primary-white rounded-lg h-[2px] w-8 sm:w-16"></div>
+        </div>
       </section>
 
       {/* About Section */}
@@ -63,8 +63,9 @@ export default function HomePage() {
         className="relative flex flex-col items-center justify-center lg:flex-row-reverse gap-12 lg:gap-32 py-12 mx-6"
       >
         <div className="absolute left-0 -bottom-24 z-0 w-36 h-36 rounded-full bg-accent-color blur-[150px]"></div>
+        <div className="absolute invisible sm:visible right-0 -bottom-24 z-0 w-36 h-36 rounded-full bg-accent-color blur-[150px]"></div>
         <div className="self-center w-1/2 lg:w-3/12">
-          <img src="/assets/kalkidan-mobile.png" alt="kalkidan-image" />
+          <img src="/assets/kalkidan-mobile.png" alt="kalkidan birhanu" />
         </div>
         <div className="flex flex-col gap-4 lg:w-1/2 lg:justify-self-start -start">
           <div>
@@ -83,19 +84,21 @@ export default function HomePage() {
             href={personalInfo.resumeUrl}
             target="_blank"
             rel="noopener noreferrer"
-            className="bg-accent-color text-lg font-Oxanium font-bold w-fit px-10 py-2 text-dark-gray rounded-lg hover:bg-dark-yellow"
+            className="bg-accent-color text-lg font-Oxanium font-bold w-fit px-10 py-2 text-dark-gray rounded-lg hover:bg-dark-yellow transition-colors"
           >
             RESUME
           </a>
-          <div className="flex gap-4">
+          <div className="flex flex-wrap gap-4">
             <p className="font-Oxanium text-white text-lg">Social links :</p>
-            <div className="flex gap-2 items-center">
+            <div className="flex gap-2 items-center flex-wrap">
               {personalInfo.socialLinks.map((link, index) => (
                 <span key={link.name} className="flex gap-2 items-center">
-                  <a className="hover:underline" href={link.url}>
+                  <a className="hover:underline text-paragraph" href={link.url}>
                     {link.name}
                   </a>
-                  {index < personalInfo.socialLinks.length - 1 && <p>/</p>}
+                  {index < personalInfo.socialLinks.length - 1 && (
+                    <p className="text-paragraph">/</p>
+                  )}
                 </span>
               ))}
             </div>
@@ -107,15 +110,12 @@ export default function HomePage() {
       <section className="relative z-20 flex items-center justify-center pb-20">
         <div className="bg-light-black w-11/12 rounded-lg">
           <div className="relative flex flex-col gap-6 pt-8 pb-12 mx-auto max-w-7xl px-6">
-            {" "}
-            {/* Use mx-auto and max-width */}
             <div>
               <h2 className="flex items-center gap-2 font-Oxanium text-white font-semibold text-2xl">
                 Featured Projects
               </h2>
               <p className="text-dark-yellow">My Works</p>
             </div>
-            {/* --- FIX: Use our new responsive grid class --- */}
             <div className="grid grid-cols-responsive gap-6">
               {featuredProjects.map((project) => (
                 <VideoCard key={project.id} project={project} />

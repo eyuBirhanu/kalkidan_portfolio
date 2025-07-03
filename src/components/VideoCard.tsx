@@ -1,4 +1,3 @@
-// src/components/VideoCard.tsx
 import type { Project } from "../types";
 
 const Placeholder = () => (

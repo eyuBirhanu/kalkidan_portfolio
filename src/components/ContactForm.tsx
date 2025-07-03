@@ -1,12 +1,6 @@
-// src/components/ContactForm.tsx
-
-import { useState } from "react"; // Import useState
+import { useState } from "react";
 import { useForm, type SubmitHandler } from "react-hook-form";
-import type { PersonalInfo, SocialLink } from "../types";
-import personalInfoData from "../data/personalInfo.json";
-import Notification from "./Notification"; // Import our new component
-
-const personalInfo: PersonalInfo = personalInfoData;
+import Notification from "./Notification";
 
 interface FormInputs {
   "user-name": string;
@@ -15,10 +9,9 @@ interface FormInputs {
   message: string;
 }
 
-// Define the state for our notification
 interface NotificationState {
   message: string;
-  type: "success" | "error" | null; // 'null' means it's hidden
+  type: "success" | "error" | null;
 }
 
 export default function ContactForm() {
@@ -26,10 +19,9 @@ export default function ContactForm() {
     register,
     handleSubmit,
     formState: { errors },
-    reset, // Get the reset function from useForm
+    reset,
   } = useForm<FormInputs>();
 
-  // Add state to manage the notification and submission status
   const [notification, setNotification] = useState<NotificationState>({
     message: "",
     type: null,
@@ -55,17 +47,14 @@ export default function ContactForm() {
       });
 
       if (response.ok) {
-        // --- THIS IS THE CHANGE ---
-        // Instead of alert(), set the notification state
         setNotification({
           message: "Message sent successfully!",
           type: "success",
         });
-        reset(); // Clear the form fields on success
+        reset();
       } else {
         const errorData = await response.json();
         console.error("Formspree error:", errorData);
-        // --- THIS IS THE CHANGE ---
         setNotification({
           message: "Failed to send message. Please try again.",
           type: "error",
@@ -73,13 +62,12 @@ export default function ContactForm() {
       }
     } catch (error) {
       console.error("Form submission error:", error);
-      // --- THIS IS THE CHANGE ---
       setNotification({
         message: "An error occurred. Please check your connection.",
         type: "error",
       });
     } finally {
-      setIsSubmitting(false); // Re-enable the button
+      setIsSubmitting(false);
     }
   };
 
@@ -94,7 +82,6 @@ export default function ContactForm() {
 
   return (
     <>
-      {/* Conditionally render the Notification component */}
       {notification.type && (
         <Notification
           message={notification.message}
@@ -109,7 +96,6 @@ export default function ContactForm() {
       >
         <div className="w-full sm:w-98 flex flex-col gap-6 bg-[#0B0B0B] p-6 rounded-md">
           <div className="flex flex-col gap-2">
-            {/* ... Your input fields remain exactly the same ... */}
             {/* Name */}
             <div className="flex flex-col">
               <label className="ps-2" htmlFor="user-name">
@@ -196,7 +182,7 @@ export default function ContactForm() {
           </div>
           <button
             type="submit"
-            disabled={isSubmitting} // Disable button while submitting
+            disabled={isSubmitting}
             className="bg-accent-color text-lg font-Oxanium font-bold w-full px-10 py-2 text-dark-gray rounded-lg hover:bg-accent-color/85 disabled:bg-gray-500 disabled:cursor-not-allowed"
           >
             {isSubmitting ? "SENDING..." : "SEND"}

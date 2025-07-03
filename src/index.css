@@ -5,7 +5,6 @@
 @tailwind components;
 @tailwind utilities;
 
-/* Your custom global styles */
 body {
     scrollbar-width: thin;
     scrollbar-color: hsl(47, 100%, 50%) #0B0B0B;

@@ -17,11 +17,10 @@ export default {
         "primary-white": "hsl(0, 0%, 90%)",
         paragraph: "hsl(0, 0%, 70%)",
         "light-black": "hsl(0, 0%, 5%)",
-        "dark-yellow": "hsla(45, 100%, 50%, 0.8)", // Corrected opacity format
+        "dark-yellow": "hsla(45, 100%, 50%, 0.8)",
         "dark-gray": "hsl(0, 0%, 28%)",
       },
       backgroundImage: {
-        // Updated paths for React project structure
         "home-mobile-hero": "url('/images/mobile/mobile-hero.png')",
         "home-desktop-hero": "url('/images/desktop/Hero-desktop.png')",
         "contact-desktop-hero": "url('/images/desktop/contact-hero.png')",
@@ -38,10 +37,9 @@ export default {
         46: "11.25rem",
         68: "16.875rem",
         58: "14.063rem",
-        100: "25rem", // Added for shorts/reels
+        100: "25rem",
       },
       minWidth: {
-        // Added for shorts/reels
         40: "10rem", // 160px
         50: "12.5rem", // 200px
         60: "15rem", // 240px

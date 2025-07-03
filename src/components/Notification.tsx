@@ -1,4 +1,3 @@
-// src/components/Notification.tsx
 import { useEffect } from "react";
 
 interface NotificationProps {
@@ -12,24 +11,20 @@ export default function Notification({
   type,
   onClose,
 }: NotificationProps) {
-  // Automatically close the notification after 5 seconds
   useEffect(() => {
     const timer = setTimeout(() => {
       onClose();
-    }, 5000); // 5000ms = 5 seconds
+    }, 5000);
 
-    // This is a cleanup function. It runs if the component is removed.
-    // This prevents errors if the user closes it manually before 5s.
     return () => {
       clearTimeout(timer);
     };
-  }, [message, onClose]); // Rerun the effect if the message changes
+  }, [message, onClose]);
 
-  // Determine styles based on the 'type' prop
   const baseClasses =
     "fixed top-16 left-1/2 -translate-x-1/2 z-50 flex items-center justify-between gap-4 w-11/12 max-w-md p-4 rounded-lg shadow-lg text-primary-white transition-all";
   const typeClasses = {
-    success: "bg-green-500/90 backdrop-blur-sm",
+    success: "bg-black/90 backdrop-blur-sm border-[.2px] border-white/90",
     error: "bg-red-500/90 backdrop-blur-sm",
   };
 

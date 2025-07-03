@@ -1,4 +1,3 @@
-// src/App.jsx
 import {
   createBrowserRouter,
   createRoutesFromElements,
@@ -20,8 +19,6 @@ const router = createBrowserRouter(
       <Route index element={<HomePage />} />
       <Route path="works" element={<WorksPage />} />
       <Route path="contact" element={<ContactPage />} />
-      {/* You can add a 404 Not Found page here later */}
-      {/* <Route path="*" element={<NotFoundPage />} /> */}
     </Route>
   )
 );

@@ -1,4 +1,3 @@
-// src/components/Footer.jsx
 import { Link } from "react-router-dom";
 import Logo from "./Logo";
 
@@ -7,7 +6,6 @@ export default function Footer() {
     <footer className="bg-light-black font-Lato flex flex-col gap-4 text-center py-6 px-6 text-sm sm:text-base text-paragraph">
       <div className="flex flex-col sm:flex-row sm:justify-between px-20 gap-2 text-center items-center justify-center ">
         <Link to="/">
-          {/* Re-using the logo component with different styling via className or wrapper */}
           <div className="opacity-50">
             <Logo />
           </div>
@@ -28,7 +26,7 @@ export default function Footer() {
       </div>
       <hr className="border-white/20" />
       <p className="text-sm">
-        Copyright © 2024 Eyu Birhanu. All rights reserved.
+        Copyright © 2024 <a href="">Eyu Birhanu.</a> All rights reserved.
       </p>
     </footer>
   );
