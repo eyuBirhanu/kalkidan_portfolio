@@ -4,18 +4,53 @@
   "nationality": "Ethiopian",
   "passions": "Creative & Artistic, Music & Football",
   "experience": "2+ years",
-  "about_p1": "I'm a 23 Year old Ethiopian artist whose passions are all things Creative & Artistic, Music & Football.",
-  "about_p2": "I've worked in the industry for 2+ years, creating a myriad of multimedia content for various clients, large & small.",
-  "about_p3": "I wear many hats, I'm a Creative/Art Director & Multimedia Designer that can strategize, plan, manage, craft and execute virtually anything for any brand.",
-  "resumeUrl": "/path/to/your/resume.pdf",
+  "about_p1": [
+    { "type": "text", "content": "I’m a passionate video editor with a knack for turning " },
+    { "type": "highlight", "content": "raw footage", "color": "green" },
+    { "type": "text", "content": " into compelling " },
+    { "type": "highlight", "content": "visual stories", "color": "blue" },
+    { "type": "text", "content": ". I use tools like " },
+    { "type": "highlight", "content": "Adobe Premiere Pro", "color": "purple" },
+    { "type": "text", "content": ", " },
+    { "type": "highlight", "content": "Wondershare Filmora", "color": "purple" },
+    { "type": "text", "content": ", and " },
+    { "type": "highlight", "content": "Powtoon", "color": "purple" },
+    { "type": "text", "content": " to bring ideas to life with clarity and creativity." }
+  ],
+  "about_p2": [
+    { "type": "text", "content": "I specialize in " },
+    { "type": "highlight", "content": "seamless transitions", "color": "yellow" },
+    { "type": "text", "content": ", " },
+    { "type": "highlight", "content": "sound design", "color": "yellow" },
+    { "type": "text", "content": ", and " },
+    { "type": "highlight", "content": "color correction", "color": "yellow" },
+    { "type": "text", "content": ", crafting edits that are both " },
+    { "type": "highlight", "content": "polished", "color": "green" },
+    { "type": "text", "content": " and " },
+    { "type": "highlight", "content": "emotionally engaging", "color": "blue" },
+    { "type": "text", "content": ". My workflow blends " },
+    { "type": "highlight", "content": "creativity", "color": "purple" },
+    { "type": "text", "content": " with technical " },
+    { "type": "highlight", "content": "precision", "color": "green" },
+    { "type": "text", "content": " to enhance storytelling." }
+  ],
+  "about_p3": [
+    { "type": "text", "content": "I enjoy collaborating with other creatives and bringing " },
+    { "type": "highlight", "content": "fresh energy", "color": "blue" },
+    { "type": "text", "content": " to every project. If you’re looking for an editor who can deliver clean, " },
+    { "type": "highlight", "content": "impactful visuals", "color": "yellow" },
+    { "type": "text", "content": ", I’d love to help bring your next story to life." }
+  ],
+  "resumeUrl": "/assets/resume.pdf",
   "socialLinks": [
     { "name": "Email", "url": "mailto:bkalkidan982@gmail.com" },
-    { "name": "YouTube", "url": "https://www.youtube.com/@kalkidanBirhanu-g3p" },
+    { "name": "YouTube", "url": "https://www.youtube.com/@Kalkidan_Birhanu-s7r" },
+    { "name": "Drive Link ", "url": "https://drive.google.com/drive/folders/1GHCxkJ0SF7p8dnzQt4QJluaw2ke0hqEs?usp=sharing" },
     { "name": "LinkedIn", "url": "https://www.linkedin.com/in/kalkidan-birhanu/" }
   ],
   "youtube": {
       "channelName": "Kalkidan Birhanu",
-      "channelUrl": "https://www.youtube.com/@kalkidanBirhanu-g3p",
+      "channelUrl": "https://www.youtube.com/@Kalkidan_Birhanu-s7r",
       "logo": "/assets/Youtube Logo.png",
       "subscribers": "9 subscribers"
   }

@@ -1,93 +1,69 @@
 [
   {
     "id": 1,
-    "title": "Project One",
-    "embedUrl": "https://www.youtube.com/embed/tfPBaB_69uE?si=x9-J1droA0u6znZa",
-    "category": "YouTube Videos",
-    "format": "widescreen"
-  },
-  {
-    "id": 10,
-    "title": "Project One",
-    "embedUrl": "https://www.youtube.com/embed/tfPBaB_69uE?si=x9-J1droA0u6znZa",
-    "category": "YouTube Videos",
-    "format": "widescreen"
-  },
-  {
-    "id": 11,
-    "title": "Project One",
-    "embedUrl": "https://www.youtube.com/embed/tfPBaB_69uE?si=x9-J1droA0u6znZa",
-    "category": "YouTube Videos",
-    "format": "widescreen"
-  },
-   {
-    "id": 12,
-    "title": "Project One",
-    "embedUrl": "https://www.youtube.com/embed/tfPBaB_69uE?si=x9-J1droA0u6znZa",
-    "category": "YouTube Videos",
-    "format": "widescreen"
+    "title": "Ahadu | Men's Clothing Brand",
+    "embedUrl": "https://www.youtube.com/embed/tfPBaB_69uE",
+    "category": "Promos and Ads",
+    "format": "widescreen",
+    "client": "Ahadu"
   },
   {
     "id": 2,
-    "title": "Project Two",
-    "embedUrl": "https://www.youtube.com/embed/a3ICNMQW7Ok?si=FlTR2aJoGYxbsKOD",
-    "category": "Promos and Ads",
+    "title": "Motion Design Reel 2024",
+    "embedUrl": "https://www.youtube.com/embed/viI8W_Kb2wg",
+    "category": "Corporate Videos",
     "format": "widescreen"
   },
   {
     "id": 3,
-    "title": "Project Three",
-    "embedUrl": "https://www.youtube.com/embed/xrRDlOWR1OU?si=3P6r3P_p4ko9qU90",
-    "category": "Corporate Videos",
-    "format": "widescreen"
+    "title": "Ahadu | Promo Ad",
+    "embedUrl": "https://www.youtube.com/embed/DeN55E3YwK8",
+    "category": "Promos and Ads",
+    "format": "widescreen",
+    "client": "Ahadu"
   },
+  
   {
-    "id": 14,
-    "title": "Project Three",
-    "embedUrl": "https://www.youtube.com/embed/xrRDlOWR1OU?si=3P6r3P_p4ko9qU90",
+    "id": 5,
+    "title": "KAF | A Short Fashion Film",
+    "embedUrl": "https://www.youtube.com/embed/pCV3evS6W2M",
     "category": "Corporate Videos",
-    "format": "widescreen"
-  },
-  {
-    "id": 4,
-    "title": "Shorts Example",
-    "embedUrl": "https://www.youtube.com/embed/YOUR_SHORT_ID",
-    "category": "Shorts and Reels",
-    "format": "portrait"
+    "format": "widescreen",
+    "client": "KAF Productions"
   },
   {
     "id": 6,
-    "title": "Shorts Example",
-    "embedUrl": "https://www.youtube.com/embed/YOUR_SHORT_ID",
+    "title": "Sunburn Relief Tips",
+    "embedUrl": "https://www.youtube.com/embed/5apDmQGWsZc",
     "category": "Shorts and Reels",
     "format": "portrait"
   },
   {
     "id": 7,
-    "title": "Shorts Example",
-    "embedUrl": "https://www.youtube.com/embed/YOUR_SHORT_ID",
+    "title": "Two Dogs, Two Moods",
+    "embedUrl": "https://www.youtube.com/embed/htS4LL00CG8",
     "category": "Shorts and Reels",
     "format": "portrait"
   },
   {
     "id": 8,
-    "title": "Shorts Example",
-    "embedUrl": "https://www.youtube.com/embed/YOUR_SHORT_ID",
+    "title": "Poem | Whispers of Greed",
+    "embedUrl": "https://www.youtube.com/embed/4iJUoY1WMaw",
     "category": "Shorts and Reels",
     "format": "portrait"
   },
   {
     "id": 9,
-    "title": "Shorts Example",
-    "embedUrl": "https://www.youtube.com/embed/YOUR_SHORT_ID",
+    "title": "Poem Sequel | Greed Grows Quieter",
+    "embedUrl": "https://www.youtube.com/embed/abCyqazkdGU",
     "category": "Shorts and Reels",
     "format": "portrait"
   },
   {
-    "id": 5,
-    "title": "Podcast Example",
-    "embedUrl": null,
-    "category": "Podcasts and Short Films",
-    "format": "widescreen"
+    "id": 10,
+    "title": "What Paramount Did – Explained",
+    "embedUrl": "https://www.youtube.com/embed/4ojieNCfr0w",
+    "category": "Shorts and Reels",
+    "format": "portrait"
   }
 ]

@@ -1,4 +1,5 @@
 import { Link } from "react-router-dom";
+import Highlight from "../components/Highlight";
 import useSetTitle from "../hooks/useSetTitle";
 import personalInfo from "../data/personalInfo.json";
 import projectsData from "../data/projects.json";
@@ -60,12 +61,12 @@ export default function HomePage() {
       {/* About Section */}
       <section
         id="about"
-        className="relative flex flex-col items-center justify-center lg:flex-row-reverse gap-12 lg:gap-32 py-12 mx-6"
+        className="relative flex flex-col leading-7 items-center justify-center lg:flex-row-reverse gap-12 lg:gap-32 py-12 line mx-6"
       >
         <div className="absolute left-0 -bottom-24 z-0 w-36 h-36 rounded-full bg-accent-color blur-[150px]"></div>
         <div className="absolute invisible sm:visible right-0 -bottom-24 z-0 w-36 h-36 rounded-full bg-accent-color blur-[150px]"></div>
         <div className="self-center w-1/2 lg:w-3/12">
-          <img src="/assets/kalkidan-mobile.png" alt="kalkidan birhanu" />
+          <img src="/assets/kalkidan-mobile.png" alt="Kalkidan Birhanu" />
         </div>
         <div className="flex flex-col gap-4 lg:w-1/2 lg:justify-self-start -start">
           <div>
@@ -75,11 +76,45 @@ export default function HomePage() {
             </h2>
             <p className="text-dark-yellow">About me</p>
           </div>
+
+          {/* --- THIS IS THE UPDATED LOGIC --- */}
           <div className="flex flex-col gap-3 w-11/12">
-            <p>{personalInfo.about_p1}</p>
-            <p>{personalInfo.about_p2}</p>
-            <p>{personalInfo.about_p3}</p>
+            <p>
+              {personalInfo.about_p1.map((segment, index) =>
+                segment.type === "highlight" ? (
+                  <Highlight key={index} color={segment.color as any}>
+                    {segment.content}
+                  </Highlight>
+                ) : (
+                  <span key={index}>{segment.content}</span>
+                )
+              )}
+            </p>
+            <p>
+              {personalInfo.about_p2.map((segment, index) =>
+                segment.type === "highlight" ? (
+                  <Highlight key={index} color={segment.color as any}>
+                    {segment.content}
+                  </Highlight>
+                ) : (
+                  <span key={index}>{segment.content}</span>
+                )
+              )}
+            </p>
+            <p>
+              {personalInfo.about_p3.map((segment, index) =>
+                segment.type === "highlight" ? (
+                  <Highlight key={index} color={segment.color as any}>
+                    {segment.content}
+                  </Highlight>
+                ) : (
+                  <span key={index}>{segment.content}</span>
+                )
+              )}
+            </p>
           </div>
+          {/* --- END UPDATED LOGIC --- */}
+
           <a
             href={personalInfo.resumeUrl}
             target="_blank"
@@ -116,7 +151,7 @@ export default function HomePage() {
               </h2>
               <p className="text-dark-yellow">My Works</p>
             </div>
-            <div className="grid grid-cols-responsive gap-6">
+            <div className="grid grid-cols-responsive gap-6 ">
               {featuredProjects.map((project) => (
                 <VideoCard key={project.id} project={project} />
               ))}

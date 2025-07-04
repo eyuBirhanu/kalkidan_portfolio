@@ -1,5 +1,8 @@
+// src/components/VideoCard.tsx
+import { useState } from "react";
 import type { Project } from "../types";
 
+// Placeholder component remains the same. It's used when embedUrl is null.
 const Placeholder = () => (
   <div className="flex items-center justify-center flex-col w-full h-full bg-black rounded-lg text-paragraph">
     <svg style={{ display: "none" }}>
@@ -33,6 +36,10 @@ interface VideoCardProps {
 export default function VideoCard({ project }: VideoCardProps) {
   const { embedUrl, title, format } = project;
 
+  // --- ALL HOOKS AND VARIABLES MUST BE AT THE TOP LEVEL ---
+  const [isPlaying, setIsPlaying] = useState(false);
+
+  // Define responsive classes
   const formatClasses: Record<Project["format"], string> = {
     widescreen:
       "flex-shrink-0 w-[80%] sm:w-[45%] lg:w-[32%] min-w-[300px] aspect-video",
@@ -42,54 +49,71 @@ export default function VideoCard({ project }: VideoCardProps) {
       "flex-shrink-0 w-[45%] sm:w-[22%] lg:w-[18%] min-w-[200px] aspect-square",
   };
 
+  // Prepare URLs inside the component body
+  const videoId = embedUrl?.split("/").pop()?.split("?")[0];
+  const thumbnailUrl = videoId
+    ? `https://i.ytimg.com/vi/${videoId}/hqdefault.jpg`
+    : "";
 
-   let cleanEmbedUrl = embedUrl;
+  let cleanEmbedUrl = embedUrl;
   if (embedUrl) {
-    const separator = embedUrl.includes('?') ? '&' : '?';
-    cleanEmbedUrl += `${separator}controls=0&rel=0&modestbranding=1&showinfo=0`;
+    const separator = embedUrl.includes("?") ? "&" : "?";
+    cleanEmbedUrl += `${separator}rel=0&modestbranding=1&showinfo=0`;
   }
 
-  const [isPlaying, setIsPlaying] = useState(false);
+  // --- THE COMPONENT CAN ONLY HAVE ONE RETURN STATEMENT ---
+  // We use conditional rendering (ternary operator) inside the JSX.
+
+  // If there's no embedUrl at all, render the placeholder.
+  if (!embedUrl) {
     return (
-      <div
-        className={`${formatClasses[format]} relative cursor-pointer group bg-black`}
-        onClick={() => embedUrl && setIsPlaying(true)}
-      >
-        {embedUrl ? (
-          <>
-            <img
-              src={thumbnailUrl}
-              alt={title}
-              className="absolute inset-0 w-full h-full object-cover rounded-lg"
-            />
-            {/* Play button overlay */}
-            <div className="absolute inset-0 bg-black/30 flex items-center justify-center rounded-lg transition-opacity opacity-0 group-hover:opacity-100">
-              <div className="bg-black/50 p-4 rounded-full">
-                <svg width="48" height="48" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
-                    <path d="M8 5.13965V18.8604C8 20.1018 9.3364 20.8443 10.4138 20.136L19.4942 14.2756C20.4851 13.623 20.4851 12.1812 19.4942 11.5287L10.4138 5.6683C9.3364 4.95991 8 5.70238 8 6.94382V5.13965Z" fill="white"/>
-                </svg>
-              </div>
-            </div>
-          </>
-        ) : (
-          <Placeholder />
-        )}
+      <div className={formatClasses[format]}>
+        <Placeholder />
       </div>
     );
   }
 
   return (
-    <div className={formatClasses[format]}>
-      {cleanEmbedUrl && (
+    <div
+      className={`${formatClasses[format]} relative cursor-pointer group bg-black rounded-lg`}
+      onClick={() => !isPlaying && setIsPlaying(true)}
+    >
+      {isPlaying ? (
+        // If playing, render the iframe
         <iframe
-          className="rounded-lg w-full h-full"
-          src={`${cleanEmbedUrl}&autoplay=1`}
+          className="rounded-lg w-full h-full "
+          src={`${cleanEmbedUrl}&autoplay=1&controls=1`} // Add autoplay and ensure controls are on
           title={title}
           frameBorder="0"
           allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
           referrerPolicy="strict-origin-when-cross-origin"
           allowFullScreen
         ></iframe>
+      ) : (
+        // If not playing, render the thumbnail and play button (the "Facade")
+        <>
+          <img
+            src={thumbnailUrl}
+            alt={title}
+            className="absolute inset-0 w-full h-full object-cover rounded-lg"
+          />
+          <div className="absolute inset-0 bg-black/30 flex items-center justify-center rounded-lg transition-opacity opacity-0 group-hover:opacity-100">
+            <div className="bg-black/50 p-4 rounded-full">
+              <svg
+                width="48"
+                height="48"
+                viewBox="0 0 24 24"
+                fill="none"
+                xmlns="http://www.w3.org/2000/svg"
+              >
+                <path
+                  d="M8 5.13965V18.8604C8 20.1018 9.3364 20.8443 10.4138 20.136L19.4942 14.2756C20.4851 13.623 20.4851 12.1812 19.4942 11.5287L10.4138 5.6683C9.3364 4.95991 8 5.70238 8 6.94382V5.13965Z"
+                  fill="white"
+                />
+              </svg>
+            </div>
+          </div>
+        </>
       )}
     </div>
   );

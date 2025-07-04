@@ -1,4 +1,3 @@
-// src/types/index.ts
 
 export interface SocialLink {
   name: string;
@@ -39,7 +38,8 @@ export type ProjectFormat = "widescreen" | "portrait" | "square";
 export interface Project {
   id: number;
   title: string;
-  embedUrl: string | null; // Can be a string or null
+  embedUrl: string | null;
   category: ProjectCategory;
   format: ProjectFormat;
+  client?: string; 
 }

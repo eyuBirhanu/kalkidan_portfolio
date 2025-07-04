@@ -43,7 +43,11 @@ export default function ContactPage() {
                 <div className="flex gap-2 items-center">
                   {personalInfo.socialLinks.map((link, index) => (
                     <span key={link.name} className="flex gap-2 items-center">
-                      <a className="hover:underline" href={link.url}>
+                      <a
+                        className="hover:underline text-nowrap"
+                        target="_blank"
+                        href={link.url}
+                      >
                         {link.name}
                       </a>
                       {index < personalInfo.socialLinks.length - 1 && <p>/</p>}

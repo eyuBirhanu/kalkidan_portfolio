@@ -1,47 +1,69 @@
-import useSetTitle from "../hooks/useSetTitle";
+// src/pages/WorksPage.tsx
 import { useState, useMemo } from "react";
 import { Link } from "react-router-dom";
 import projectsData from "../data/projects.json";
 import VideoCard from "../components/VideoCard";
+// import CtaIllustration from "../components/CtaIllustration";
+import useSetTitle from "../hooks/useSetTitle";
 import type { Project, ProjectCategory } from "../types";
 
-const projects: Project[] = projectsData as Project[];
-const categories: (ProjectCategory | "All")[] = [
-  "All",
-  "Corporate Videos",
-  "YouTube Videos",
-  "Promos and Ads",
-  "Shorts and Reels",
-  "Podcasts and Short Films",
-];
+const allProjects: Project[] = projectsData as Project[];
 
-const projectsByCategory = projects.reduce((acc, project) => {
+// --- Data Preparation ---
+
+// Create a list of categories that actually have projects
+const categoriesWithContent: (ProjectCategory | "All")[] = ["All"];
+const projectsByCategory = allProjects.reduce((acc, project) => {
   if (!acc[project.category]) {
     acc[project.category] = [];
+    // Add category to our list only if it's not already there
+    if (!categoriesWithContent.includes(project.category)) {
+      categoriesWithContent.push(project.category);
+    }
   }
   acc[project.category].push(project);
   return acc;
 }, {} as Record<ProjectCategory, Project[]>);
 
+// Dynamically create a unique list of clients from the data
+const clients = [
+  ...new Set(allProjects.map((p) => p.client).filter(Boolean)),
+] as string[];
+
+// --- Component ---
+
 export default function WorksPage() {
   useSetTitle("My Works | Kalkidan Birhanu Portfolio");
-  const [activeFilter, setActiveFilter] = useState<ProjectCategory | "All">(
-    "All"
-  );
 
-  const handleFilterClick = (category: ProjectCategory | "All") => {
-    setActiveFilter(category);
+  // State to manage which filter type and value is active
+  const [activeFilter, setActiveFilter] = useState({
+    type: "all",
+    value: "All",
+  });
+
+  const handleFilterClick = (
+    type: "all" | "category" | "client",
+    value: string
+  ) => {
+    setActiveFilter({ type, value });
   };
 
+  // Memoized logic to get the projects for the currently active filter
   const filteredProjects = useMemo(() => {
-    if (activeFilter === "All") return [];
-    return projects.filter((p) => p.category === activeFilter);
+    const { type, value } = activeFilter;
+    if (type === "category") {
+      return allProjects.filter((p) => p.category === value);
+    }
+    if (type === "client") {
+      return allProjects.filter((p) => p.client === value);
+    }
+    return []; // Return empty for 'all' as it's handled separately
   }, [activeFilter]);
 
+  // Define the classes for our two different layouts
   const scrollContainerClasses = "flex items-stretch gap-4 overflow-x-auto p-4";
-
   const gridLayoutClass = "grid grid-cols-responsive gap-4";
-
+  const singleItemScrollContainerClasses = "max-w-xl";
   return (
     <>
       <section className="hero works-hero relative flex items-center justify-center top-0 z-0 w-screen h-[60vh] bg-work-mobile-hero sm:bg-work-desktop-hero bg-cover bg-center">
@@ -59,84 +81,126 @@ export default function WorksPage() {
 
       <section className="flex items-center justify-center font-Lato pb-24">
         <div className="w-11/12 my-6 flex flex-col gap-8">
-          {/* Filter Buttons */}
-          <div className="works card font-Oxanium text-base sm:text-lg flex gap-4 xl:overflow-x-visible overflow-x-scroll p-2">
-            {categories.map((category) => (
-              <button
-                key={category}
-                onClick={() => handleFilterClick(category)}
-                className={`all-filters text-nowrap px-6 py-2 rounded-lg transition-colors ${
-                  activeFilter === category
-                    ? "bg-white/90 text-light-black font-semibold"
-                    : "bg-light-black text-primary-white hover:bg-white/10"
-                }`}
-              >
-                {category}
-              </button>
-            ))}
-          </div>
+          {/* --- FILTER BUTTONS SECTION --- */}
+          <div className="flex flex-col gap-4">
+            {/* CATEGORY FILTERS */}
+            <div className="works card font-Oxanium text-base sm:text-lg flex gap-4 xl:overflow-x-visible overflow-x-scroll p-2">
+              {categoriesWithContent.map((category) => (
+                <button
+                  key={category}
+                  onClick={() =>
+                    handleFilterClick(
+                      category === "All" ? "all" : "category",
+                      category
+                    )
+                  }
+                  className={`all-filters text-nowrap px-6 py-2 rounded-lg transition-colors ${
+                    activeFilter.value === category
+                      ? "bg-white/90 text-light-black font-semibold"
+                      : "bg-light-black text-primary-white hover:bg-white/10"
+                  }`}
+                >
+                  {category}
+                </button>
+              ))}
+            </div>
 
-          {/* Video Sections */}
-          <div className="flex flex-col gap-12">
-            {activeFilter === "All" ? (
-              Object.entries(projectsByCategory).map(
-                ([category, projectList]) => {
-                  if (projectList.length === 0) return null;
-                  return (
-                    <div key={category} className="flex flex-col gap-2">
-                      <h2 className="ps-3 text-lg lg:text-2xl font-Oxanium text-primary-white">
-                        {category}
-                      </h2>
-                      <div className={scrollContainerClasses}>
-                        {projectList.map((p) => (
-                          <VideoCard key={p.id} project={p} />
-                        ))}
-                      </div>
-                    </div>
-                  );
-                }
-              )
-            ) : filteredProjects.length > 0 ? (
-              <div className="grid content-center">
-                <h2 className="ps-3 text-left text-lg lg:text-2xl font-Oxanium text-primary-white">
-                  {activeFilter}
-                </h2>
-                <div className={gridLayoutClass}>
-                  {filteredProjects.map((p) => (
-                    <VideoCard key={p.id} project={p} />
+            {/* CLIENT FILTERS (only shown if there are clients) */}
+            {clients.length > 0 && (
+              <div className="flex items-center gap-4 border-t border-white/10 pt-4 flex-wrap">
+                <p className="font-Oxanium text-base sm:text-lg text-paragraph">
+                  Filter by Client:
+                </p>
+                <div className="flex gap-4 flex-wrap">
+                  {clients.map((client) => (
+                    <button
+                      key={client}
+                      onClick={() => handleFilterClick("client", client)}
+                      className={`all-filters text-nowrap px-4 py-1.5 rounded-lg transition-colors text-sm sm:text-base ${
+                        activeFilter.value === client
+                          ? "bg-accent-color/90 text-black font-semibold"
+                          : "bg-light-black text-primary-white hover:bg-white/10"
+                      }`}
+                    >
+                      {client}
+                    </button>
                   ))}
                 </div>
               </div>
-            ) : (
-              <div className="flex flex-col gap-4 items-center justify-center text-paragraph py-10">
-                <p className="ps-3 text-sm lg:text-lg font-Lato">
-                  Oops! Looks like it's empty here.
-                </p>
-                <svg
-                  width="44"
-                  height="44"
-                  viewBox="0 0 24 24"
-                  fill="none"
-                  xmlns="http://www.w3.org/2000/svg"
-                >
-                  <path
-                    d="M12 22C17.5228 22 22 17.5228 22 12C22 6.47715 17.5228 2 12 2C6.47715 2 2 6.47715 2 12C2 17.5228 6.47715 22 12 22Z"
-                    stroke="#B3B3B3"
-                    strokeWidth="2"
-                    strokeLinecap="round"
-                    strokeLinejoin="round"
-                  />
-                  <path
-                    d="M12 8V12"
-                    stroke="#B3B3B3"
-                    strokeWidth="2"
-                    strokeLinecap="round"
-                    strokeLinejoin="round"
-                  />
-                  <circle cx="12" cy="16" r="1" fill="#B3B3B3" />
-                </svg>
-              </div>
             )}
+          </div>
+
+          {/* --- VIDEO DISPLAY SECTION --- */}
+          <div className="flex flex-col gap-12 min-h-[300px]">
+            {activeFilter.type === "all" &&
+              // RENDER SCROLLING "FILMSTRIPS" FOR "ALL" VIEW
+              Object.entries(projectsByCategory).map(
+                ([category, projectList]) => (
+                  <div key={category} className="flex flex-col gap-2">
+                    <h2 className="ps-3 text-lg lg:text-2xl font-Oxanium text-primary-white">
+                      {category}
+                    </h2>
+                    <div
+                      className={`${scrollContainerClasses} ${
+                        projectList.length === 1
+                          ? singleItemScrollContainerClasses
+                          : ""
+                      }`}
+                    >
+                      {projectList.map((p) => (
+                        <VideoCard key={p.id} project={p} />
+                      ))}
+                    </div>
+                  </div>
+                )
+              )}
+
+            {activeFilter.type === "category" &&
+              // RENDER RESPONSIVE GRID FOR CATEGORY FILTER
+              (filteredProjects.length > 0 ? (
+                <div className="flex flex-col gap-2">
+                  <h2 className="ps-3 text-lg lg:text-2xl font-Oxanium text-primary-white">
+                    {activeFilter.value}
+                  </h2>
+                  <div className={gridLayoutClass}>
+                    {filteredProjects.map((p) => (
+                      <VideoCard key={p.id} project={p} />
+                    ))}
+                  </div>
+                </div>
+              ) : (
+                <div className="text-center py-10">
+                  No videos found in this category.
+                </div>
+              ))}
+
+            {activeFilter.type === "client" &&
+              // RENDER SCROLLING "FILMSTRIP" FOR CLIENT FILTER
+              (filteredProjects.length > 0 ? (
+                <div className="flex flex-col gap-2">
+                  <h2 className="ps-3 text-lg lg:text-2xl font-Oxanium text-primary-white">
+                    Work for:{" "}
+                    <span className="text-accent-color">
+                      {activeFilter.value}
+                    </span>
+                  </h2>
+                  <div
+                    className={`${scrollContainerClasses} ${
+                      filteredProjects.length === 1
+                        ? singleItemScrollContainerClasses
+                        : ""
+                    }`}
+                  >
+                    {filteredProjects.map((p) => (
+                      <VideoCard key={p.id} project={p} />
+                    ))}
+                  </div>
+                </div>
+              ) : (
+                <div className="text-center py-10">
+                  No videos found for this client.
+                </div>
+              ))}
           </div>
         </div>
       </section>
