@@ -2,7 +2,6 @@
 import { useState } from "react";
 import type { Project } from "../types";
 
-// Placeholder component remains the same. It's used when embedUrl is null.
 const Placeholder = () => (
   <div className="flex items-center justify-center flex-col w-full h-full bg-black rounded-lg text-paragraph">
     <svg style={{ display: "none" }}>
@@ -36,10 +35,8 @@ interface VideoCardProps {
 export default function VideoCard({ project }: VideoCardProps) {
   const { embedUrl, title, format } = project;
 
-  // --- ALL HOOKS AND VARIABLES MUST BE AT THE TOP LEVEL ---
   const [isPlaying, setIsPlaying] = useState(false);
 
-  // Define responsive classes
   const formatClasses: Record<Project["format"], string> = {
     widescreen:
       "flex-shrink-0 w-[80%] sm:w-[45%] lg:w-[32%] min-w-[300px] aspect-video",
@@ -49,7 +46,6 @@ export default function VideoCard({ project }: VideoCardProps) {
       "flex-shrink-0 w-[45%] sm:w-[22%] lg:w-[18%] min-w-[200px] aspect-square",
   };
 
-  // Prepare URLs inside the component body
   const videoId = embedUrl?.split("/").pop()?.split("?")[0];
   const thumbnailUrl = videoId
     ? `https://i.ytimg.com/vi/${videoId}/hqdefault.jpg`
@@ -61,10 +57,6 @@ export default function VideoCard({ project }: VideoCardProps) {
     cleanEmbedUrl += `${separator}rel=0&modestbranding=1&showinfo=0`;
   }
 
-  // --- THE COMPONENT CAN ONLY HAVE ONE RETURN STATEMENT ---
-  // We use conditional rendering (ternary operator) inside the JSX.
-
-  // If there's no embedUrl at all, render the placeholder.
   if (!embedUrl) {
     return (
       <div className={formatClasses[format]}>
@@ -79,10 +71,9 @@ export default function VideoCard({ project }: VideoCardProps) {
       onClick={() => !isPlaying && setIsPlaying(true)}
     >
       {isPlaying ? (
-        // If playing, render the iframe
         <iframe
           className="rounded-lg w-full h-full "
-          src={`${cleanEmbedUrl}&autoplay=1&controls=1`} // Add autoplay and ensure controls are on
+          src={`${cleanEmbedUrl}&autoplay=1&controls=1`}
           title={title}
           frameBorder="0"
           allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
@@ -90,7 +81,6 @@ export default function VideoCard({ project }: VideoCardProps) {
           allowFullScreen
         ></iframe>
       ) : (
-        // If not playing, render the thumbnail and play button (the "Facade")
         <>
           <img
             src={thumbnailUrl}

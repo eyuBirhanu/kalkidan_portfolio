@@ -26,7 +26,16 @@ export default function Footer() {
       </div>
       <hr className="border-white/20" />
       <p className="text-sm">
-        Copyright © 2024 <a href="">Eyu Birhanu.</a> All rights reserved.
+        Copyright © 2025{" "}
+        <a
+          className="text-white/70 hover:text-white/90 hover:underline"
+          href="https://www.linkedin.com/in/eyu-birhanu/"
+          target="_blank"
+        >
+          Eyu Birhanu
+        </a>
+        {". "}
+        All rights reserved.
       </p>
     </footer>
   );

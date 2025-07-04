@@ -3,20 +3,15 @@ import { useState, useMemo } from "react";
 import { Link } from "react-router-dom";
 import projectsData from "../data/projects.json";
 import VideoCard from "../components/VideoCard";
-// import CtaIllustration from "../components/CtaIllustration";
 import useSetTitle from "../hooks/useSetTitle";
 import type { Project, ProjectCategory } from "../types";
 
 const allProjects: Project[] = projectsData as Project[];
 
-// --- Data Preparation ---
-
-// Create a list of categories that actually have projects
 const categoriesWithContent: (ProjectCategory | "All")[] = ["All"];
 const projectsByCategory = allProjects.reduce((acc, project) => {
   if (!acc[project.category]) {
     acc[project.category] = [];
-    // Add category to our list only if it's not already there
     if (!categoriesWithContent.includes(project.category)) {
       categoriesWithContent.push(project.category);
     }
@@ -25,17 +20,14 @@ const projectsByCategory = allProjects.reduce((acc, project) => {
   return acc;
 }, {} as Record<ProjectCategory, Project[]>);
 
-// Dynamically create a unique list of clients from the data
 const clients = [
   ...new Set(allProjects.map((p) => p.client).filter(Boolean)),
 ] as string[];
 
-// --- Component ---
 
 export default function WorksPage() {
   useSetTitle("My Works | Kalkidan Birhanu Portfolio");
 
-  // State to manage which filter type and value is active
   const [activeFilter, setActiveFilter] = useState({
     type: "all",
     value: "All",
@@ -48,7 +40,6 @@ export default function WorksPage() {
     setActiveFilter({ type, value });
   };
 
-  // Memoized logic to get the projects for the currently active filter
   const filteredProjects = useMemo(() => {
     const { type, value } = activeFilter;
     if (type === "category") {
@@ -57,10 +48,9 @@ export default function WorksPage() {
     if (type === "client") {
       return allProjects.filter((p) => p.client === value);
     }
-    return []; // Return empty for 'all' as it's handled separately
+    return [];
   }, [activeFilter]);
 
-  // Define the classes for our two different layouts
   const scrollContainerClasses = "flex items-stretch gap-4 overflow-x-auto p-4";
   const gridLayoutClass = "grid grid-cols-responsive gap-4";
   const singleItemScrollContainerClasses = "max-w-xl";
@@ -81,7 +71,6 @@ export default function WorksPage() {
 
       <section className="flex items-center justify-center font-Lato pb-24">
         <div className="w-11/12 my-6 flex flex-col gap-8">
-          {/* --- FILTER BUTTONS SECTION --- */}
           <div className="flex flex-col gap-4">
             {/* CATEGORY FILTERS */}
             <div className="works card font-Oxanium text-base sm:text-lg flex gap-4 xl:overflow-x-visible overflow-x-scroll p-2">
@@ -105,7 +94,6 @@ export default function WorksPage() {
               ))}
             </div>
 
-            {/* CLIENT FILTERS (only shown if there are clients) */}
             {clients.length > 0 && (
               <div className="flex items-center gap-4 border-t border-white/10 pt-4 flex-wrap">
                 <p className="font-Oxanium text-base sm:text-lg text-paragraph">
@@ -133,7 +121,6 @@ export default function WorksPage() {
           {/* --- VIDEO DISPLAY SECTION --- */}
           <div className="flex flex-col gap-12 min-h-[300px]">
             {activeFilter.type === "all" &&
-              // RENDER SCROLLING "FILMSTRIPS" FOR "ALL" VIEW
               Object.entries(projectsByCategory).map(
                 ([category, projectList]) => (
                   <div key={category} className="flex flex-col gap-2">
@@ -156,7 +143,6 @@ export default function WorksPage() {
               )}
 
             {activeFilter.type === "category" &&
-              // RENDER RESPONSIVE GRID FOR CATEGORY FILTER
               (filteredProjects.length > 0 ? (
                 <div className="flex flex-col gap-2">
                   <h2 className="ps-3 text-lg lg:text-2xl font-Oxanium text-primary-white">
@@ -175,7 +161,6 @@ export default function WorksPage() {
               ))}
 
             {activeFilter.type === "client" &&
-              // RENDER SCROLLING "FILMSTRIP" FOR CLIENT FILTER
               (filteredProjects.length > 0 ? (
                 <div className="flex flex-col gap-2">
                   <h2 className="ps-3 text-lg lg:text-2xl font-Oxanium text-primary-white">

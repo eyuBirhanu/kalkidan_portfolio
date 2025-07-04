@@ -77,7 +77,6 @@ export default function HomePage() {
             <p className="text-dark-yellow">About me</p>
           </div>
 
-          {/* --- THIS IS THE UPDATED LOGIC --- */}
           <div className="flex flex-col gap-3 w-11/12">
             <p>
               {personalInfo.about_p1.map((segment, index) =>
@@ -113,7 +112,6 @@ export default function HomePage() {
               )}
             </p>
           </div>
-          {/* --- END UPDATED LOGIC --- */}
 
           <a
             href={personalInfo.resumeUrl}
