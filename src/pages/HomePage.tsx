@@ -65,7 +65,7 @@ export default function HomePage() {
         <div className="absolute left-0 -bottom-24 z-0 w-36 h-36 rounded-full bg-accent-color blur-[150px]"></div>
         <div className="absolute invisible sm:visible right-0 -bottom-24 z-0 w-36 h-36 rounded-full bg-accent-color blur-[150px]"></div>
         {/* --- Profile Image --- */}
-        <div className="flex-shrink-0 w-64 h-64 p-1.5 rounded-2xl bg-gradient-to-br from-accent-color to-dark-yellow shadow-lg transition-all duration-300 transform hover:scale-105 hover:shadow-2xl sm:w-72 sm:h-72 lg:w-80 lg:h-80">
+        <div className="flex-shrink-0 w-64 h-64 p-1.5 rounded-2xl bg-gradient-to-br from-paragraph to-paragraph/90 shadow-lg transition-all duration-300 transform hover:scale-105 hover:shadow-2xl sm:w-72 sm:h-72 lg:w-80 lg:h-80">
           <img
             src="/assets/kalkidan-profile.png"
             alt="Kalkidan Birhanu"
