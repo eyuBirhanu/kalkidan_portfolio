@@ -1,5 +1,4 @@
 import { Link } from "react-router-dom";
-import Highlight from "../components/Highlight";
 import useSetTitle from "../hooks/useSetTitle";
 import personalInfo from "../data/personalInfo.json";
 import projectsData from "../data/projects.json";
@@ -23,11 +22,10 @@ export default function HomePage() {
             Visuals.
           </h1>
           <p className="sm:w-8/12">
-            Hi, I'm{" "}
-            <span className="text-dark-yellow">{personalInfo.name}</span>, a
-            video editor and designer. I create compelling videos, design unique
-            logos, and bring graphics to life, transforming ideas into visual
-            stories.
+            Hi, I'm <span className="text-dark-yellow">Kalkidan Birhanu</span>,
+            a video editor and designer. I create compelling videos, design
+            unique logos, and bring graphics to life, transforming ideas into
+            visual stories.
           </p>
           <Link
             to="/works"
@@ -61,72 +59,54 @@ export default function HomePage() {
       {/* About Section */}
       <section
         id="about"
-        className="relative flex flex-col leading-7 items-center justify-center lg:flex-row-reverse gap-12 lg:gap-32 py-12 line mx-6"
+        className="relative flex flex-col items-center justify-center gap-12 py-24 mx-6 text-paragraph lg:flex-row lg:gap-24"
       >
+        {/* Decorative background blurs */}
         <div className="absolute left-0 -bottom-24 z-0 w-36 h-36 rounded-full bg-accent-color blur-[150px]"></div>
         <div className="absolute invisible sm:visible right-0 -bottom-24 z-0 w-36 h-36 rounded-full bg-accent-color blur-[150px]"></div>
-        <div className="self-center w-1/2 lg:w-3/12">
-          <img src="/assets/kalkidan-mobile.png" alt="Kalkidan Birhanu" />
+        {/* --- Profile Image --- */}
+        <div className="flex-shrink-0 w-64 h-64 p-1.5 rounded-2xl bg-gradient-to-br from-accent-color to-dark-yellow shadow-lg transition-all duration-300 transform hover:scale-105 hover:shadow-2xl sm:w-72 sm:h-72 lg:w-80 lg:h-80">
+          <img
+            src="/assets/kalkidan-profile.png"
+            alt="Kalkidan Birhanu"
+            className="w-full h-full object-cover rounded-2xl"
+          />
         </div>
-        <div className="flex flex-col gap-4 lg:w-1/2 lg:justify-self-start -start">
+        {/* --- Text Content --- */}
+        <div className="flex flex-col gap-6 lg:w-1/2">
           <div>
-            <h2 className="flex items-center gap-2 font-Oxanium text-white font-semibold text-2xl">
-              Meet Kalkidan{" "}
-              <div className="h-0.5 w-20 bg-paragraph rounded-sm"></div>
+            <h2 className="flex items-center gap-4 font-Oxanium text-white font-semibold text-3xl">
+              Meet Kalkidan
+              <div className="h-0.5 w-24 bg-paragraph rounded-sm"></div>
             </h2>
-            <p className="text-dark-yellow">About me</p>
+            <p className="text-dark-yellow text-lg">About Me</p>
           </div>
 
-          <div className="flex flex-col gap-3 w-11/12">
-            <p>
-              {personalInfo.about_p1.map((segment, index) =>
-                segment.type === "highlight" ? (
-                  <Highlight key={index} color={segment.color as any}>
-                    {segment.content}
-                  </Highlight>
-                ) : (
-                  <span key={index}>{segment.content}</span>
-                )
-              )}
-            </p>
-            <p>
-              {personalInfo.about_p2.map((segment, index) =>
-                segment.type === "highlight" ? (
-                  <Highlight key={index} color={segment.color as any}>
-                    {segment.content}
-                  </Highlight>
-                ) : (
-                  <span key={index}>{segment.content}</span>
-                )
-              )}
-            </p>
-            <p>
-              {personalInfo.about_p3.map((segment, index) =>
-                segment.type === "highlight" ? (
-                  <Highlight key={index} color={segment.color as any}>
-                    {segment.content}
-                  </Highlight>
-                ) : (
-                  <span key={index}>{segment.content}</span>
-                )
-              )}
-            </p>
+          <div className="flex flex-col gap-4 text-base leading-7">
+            <p>{personalInfo.about_p1}</p>
+            <p>{personalInfo.about_p2}</p>
           </div>
 
           <a
             href={personalInfo.resumeUrl}
             target="_blank"
             rel="noopener noreferrer"
-            className="bg-accent-color text-lg font-Oxanium font-bold w-fit px-10 py-2 text-dark-gray rounded-lg hover:bg-dark-yellow transition-colors"
+            className="bg-accent-color text-lg font-Oxanium font-bold w-fit px-10 py-3 text-dark-gray rounded-lg hover:bg-dark-yellow transition-colors duration-300"
           >
             RESUME
           </a>
-          <div className="flex flex-wrap gap-4">
-            <p className="font-Oxanium text-white text-lg">Social links :</p>
+
+          <div className="flex flex-wrap items-center gap-4 mt-4">
+            <p className="font-Oxanium text-white text-lg">Social links:</p>
             <div className="flex gap-2 items-center flex-wrap">
               {personalInfo.socialLinks.map((link, index) => (
                 <span key={link.name} className="flex gap-2 items-center">
-                  <a className="hover:underline text-paragraph" href={link.url}>
+                  <a
+                    href={link.url}
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className="hover:underline text-paragraph"
+                  >
                     {link.name}
                   </a>
                   {index < personalInfo.socialLinks.length - 1 && (

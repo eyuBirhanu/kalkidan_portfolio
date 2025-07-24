@@ -1,47 +1,8 @@
-{
-  "name": "Kalkidan Birhanu",
-  "age": 23,
-  "nationality": "Ethiopian",
-  "passions": "Creative & Artistic, Music & Football",
-  "experience": "2+ years",
-  "about_p1": [
-    { "type": "text", "content": "I’m a passionate video editor with a knack for turning " },
-    { "type": "highlight", "content": "raw footage", "color": "green" },
-    { "type": "text", "content": " into compelling " },
-    { "type": "highlight", "content": "visual stories", "color": "blue" },
-    { "type": "text", "content": ". I use tools like " },
-    { "type": "highlight", "content": "Adobe Premiere Pro", "color": "purple" },
-    { "type": "text", "content": ", " },
-    { "type": "highlight", "content": "Wondershare Filmora", "color": "purple" },
-    { "type": "text", "content": ", and " },
-    { "type": "highlight", "content": "Powtoon", "color": "purple" },
-    { "type": "text", "content": " to bring ideas to life with clarity and creativity." }
-  ],
-  "about_p2": [
-    { "type": "text", "content": "I specialize in " },
-    { "type": "highlight", "content": "seamless transitions", "color": "yellow" },
-    { "type": "text", "content": ", " },
-    { "type": "highlight", "content": "sound design", "color": "yellow" },
-    { "type": "text", "content": ", and " },
-    { "type": "highlight", "content": "color correction", "color": "yellow" },
-    { "type": "text", "content": ", crafting edits that are both " },
-    { "type": "highlight", "content": "polished", "color": "green" },
-    { "type": "text", "content": " and " },
-    { "type": "highlight", "content": "emotionally engaging", "color": "blue" },
-    { "type": "text", "content": ". My workflow blends " },
-    { "type": "highlight", "content": "creativity", "color": "purple" },
-    { "type": "text", "content": " with technical " },
-    { "type": "highlight", "content": "precision", "color": "green" },
-    { "type": "text", "content": " to enhance storytelling." }
-  ],
-  "about_p3": [
-    { "type": "text", "content": "I enjoy collaborating with other creatives and bringing " },
-    { "type": "highlight", "content": "fresh energy", "color": "blue" },
-    { "type": "text", "content": " to every project. If you’re looking for an editor who can deliver clean, " },
-    { "type": "highlight", "content": "impactful visuals", "color": "yellow" },
-    { "type": "text", "content": ", I’d love to help bring your next story to life." }
-  ],
-  "resumeUrl": "/assets/resume.pdf",
+{ "about_p1": "A creative and results-driven Video Editor and Graphic Designer with a passion for transforming raw concepts into compelling visual narratives. I'm proficient in the Adobe Creative Suite, OBS Studio, and Canva, with a strong command of seamless editing, live streaming, sound design, and social media strategy.",
+  
+  "about_p2": "As a proactive team facilitator and collaborator, I'm recognized for leading community events and driving engagement through data-informed content strategies. I thrive on bringing ideas to life and connecting with audiences in meaningful ways.",
+
+  "resumeUrl": "/assets/resume.pdf", 
   "socialLinks": [
     { "name": "Email", "url": "mailto:bkalkidan982@gmail.com" },
     { "name": "YouTube", "url": "https://www.youtube.com/@Kalkidan_Birhanu-s7r" },
