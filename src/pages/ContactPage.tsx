@@ -30,7 +30,7 @@ export default function ContactPage() {
       value: "Quick Chat",
       action: "Message Me",
       // MAKE SURE to update this link in your JSON or here directly
-      link: "https://t.me/kal_birhanu",
+      link: "https://t.me/kal982",
       icon: (
         <svg
           className="w-8 h-8"
