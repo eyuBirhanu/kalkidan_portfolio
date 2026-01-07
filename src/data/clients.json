@@ -1,0 +1,57 @@
+[
+    {
+        "id": 1,
+        "name": "SkillBridge",
+        "logo": "data:image/webp;base64,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"
+    },
+    {
+        "id": 2,
+        "name": "A2SV",
+        "logo": "https://a2sv.org/logos/logo-white.svg"
+    },
+    {
+        "id": 3,
+        "name": "Emagn",
+        "logo": "https://emagn.com.ng/wp-content/uploads/2022/06/Emagn-logo.png"
+    },
+    {
+        "id": 4,
+        "name": "Ahadu",
+        "logo": "https://placehold.co/200x80/000000/FFFFFF?text=Ahadu&font=montserrat"
+    },
+    {
+        "id": 5,
+        "name": "Efoy",
+        "logo": "https://efoynanny.com/wp-content/uploads/2023/04/photo_2023-04-29_15-25-08.jpg"
+    },
+    {
+        "id": 6,
+        "name": "KAF Productions",
+        "logo": "https://placehold.co/200x80/000000/FFFFFF?text=KAF&font=oswald"
+    },
+    {
+        "id": 7,
+        "name": "Paramount Students",
+        "logo": "https://placehold.co/200x80/000000/FFFFFF?text=Paramount&font=raleway"
+    },
+    {
+        "id": 8,
+        "name": "RateEat",
+        "logo": "https://rateeat.app/_next/static/media/Vector.ce834abb.png"
+    },
+    {
+        "id": 9,
+        "name": "AKIL",
+        "logo": "https://placehold.co/200x80/000000/FFFFFF?text=AKIL&font=montserrat"
+    },
+    {
+        "id": 10,
+        "name": "AfroChat",
+        "logo": "https://afrochat.app/logo-small.svg"
+    },
+    {
+        "id": 11,
+        "name": "Yemuyawegini Initiative",
+        "logo": "https://yemuyaweginitiative.com/logo.svg"
+    }
+]

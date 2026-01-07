@@ -1,76 +1,81 @@
 [
   {
-    "id": 1,
-    "title": "Ahadu | Men's Clothing Brand",
-    "embedUrl": "https://www.youtube.com/embed/tfPBaB_69uE",
-    "category": "Promos and Ads",
+    "id": "vid-1",
+    "type": "video",
+    "title": "Ahadu | Brand Commercial",
+    "client": "Ahadu",
+    "description": "A high-energy commercial showcasing the new line.",
+    "thumbnailUrl": "https://img.youtube.com/vi/dQw4w9WgXcQ/hqdefault.jpg",
+    "videoUrl": "https://www.youtube.com/embed/dQw4w9WgXcQ",
     "format": "widescreen",
-    "client": "Ahadu"
+    "tags": [
+      "Commercial",
+      "Promo",
+      "Editing"
+    ],
+    "date": "2024-12-01"
   },
   {
-    "id": 2,
-    "title": "Motion Design Reel 2024",
-    "embedUrl": "https://www.youtube.com/embed/viI8W_Kb2wg",
-    "category": "Corporate Videos",
-    "format": "widescreen"
+    "id": "img-1",
+    "type": "graphic",
+    "title": "SkillBridge Event Poster",
+    "client": "SkillBridge",
+    "description": "Promotional poster for the annual hackathon.",
+    "thumbnailUrl": "https://placehold.co/600x800/1a1a1a/FFF?text=Poster+Thumb",
+    "fullImageUrl": "https://placehold.co/1200x1600/1a1a1a/FFF?text=Poster+Full",
+    "tags": [
+      "Poster",
+      "Branding",
+      "Print"
+    ],
+    "date": "2024-11-15"
   },
   {
-    "id": 3,
-    "title": "Ahadu | Promo Ad",
-    "embedUrl": "https://www.youtube.com/embed/DeN55E3YwK8",
-    "category": "Promos and Ads",
-    "format": "widescreen",
-    "client": "Ahadu"
+    "id": "soc-1",
+    "type": "social",
+    "title": "Efoy Educational Series",
+    "client": "Efoy",
+    "description": "Managed a 3-month educational campaign on Telegram reaching 5k+ parents.",
+    "thumbnailUrl": "https://placehold.co/600x600/0088cc/FFF?text=Telegram+Campaign",
+    "platform": "Telegram",
+    "link": "https://t.me/example",
+    "stats": "5.2k Reach | +20% Engagement",
+    "tags": [
+      "Social Media",
+      "Strategy",
+      "Education"
+    ],
+    "date": "2024-10-10"
   },
   {
-    "id": 4,
-    "title": "Efoy",
-    "embedUrl": "https://youtube.com/embed/Ahq0Rc5RtFc?si=R1WDR2BHyurlSR-9",
-    "category": "Shorts and Reels",
+    "id": "vid-2",
+    "type": "video",
+    "title": "Fashion Week Reels",
+    "client": "KAF Productions",
+    "description": "Fast-paced vertical edits for Instagram Reels.",
+    "thumbnailUrl": "https://placehold.co/400x711/2a2a2a/FFF?text=Reel+Thumb",
+    "videoUrl": "https://www.youtube.com/embed/dQw4w9WgXcQ",
     "format": "portrait",
-    "client": "Efoy"
+    "tags": [
+      "Reels",
+      "Fashion",
+      "Vertical"
+    ],
+    "date": "2024-09-20"
   },
   {
-    "id": 5,
-    "title": "KAF | A Short Fashion Film",
-    "embedUrl": "https://www.youtube.com/embed/pCV3evS6W2M",
-    "category": "Corporate Videos",
-    "format": "widescreen",
-    "client": "KAF Productions"
-  },
-  {
-    "id": 6,
-    "title": "Sunburn Relief Tips",
-    "embedUrl": "https://www.youtube.com/embed/5apDmQGWsZc",
-    "category": "Shorts and Reels",
-    "format": "portrait"
-  },
-  {
-    "id": 7,
-    "title": "Two Dogs, Two Moods",
-    "embedUrl": "https://www.youtube.com/embed/htS4LL00CG8",
-    "category": "Shorts and Reels",
-    "format": "portrait"
-  },
-  {
-    "id": 8,
-    "title": "Poem | Whispers of Greed",
-    "embedUrl": "https://www.youtube.com/embed/4iJUoY1WMaw",
-    "category": "Shorts and Reels",
-    "format": "portrait"
-  },
-  {
-    "id": 9,
-    "title": "Poem Sequel | Greed Grows Quieter",
-    "embedUrl": "https://www.youtube.com/embed/abCyqazkdGU",
-    "category": "Shorts and Reels",
-    "format": "portrait"
-  },
-  {
-    "id": 10,
-    "title": "What Paramount Did – Explained",
-    "embedUrl": "https://www.youtube.com/embed/4ojieNCfr0w",
-    "category": "Shorts and Reels",
-    "format": "portrait"
+    "id": "img-2",
+    "type": "graphic",
+    "title": "A2SV Logo Refresh",
+    "client": "A2SV",
+    "description": "Modernizing the brand identity for digital platforms.",
+    "thumbnailUrl": "https://placehold.co/600x400/333/FFF?text=Logo+Design",
+    "fullImageUrl": "https://placehold.co/1200x800/333/FFF?text=Logo+Full",
+    "tags": [
+      "Logo",
+      "Identity",
+      "Vector"
+    ],
+    "date": "2024-08-05"
   }
 ]

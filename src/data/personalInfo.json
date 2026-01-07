@@ -1,18 +1,93 @@
-{ "about_p1": "A creative and results-driven Video Editor and Graphic Designer with a passion for transforming raw concepts into compelling visual narratives. I'm proficient in the Adobe Creative Suite, OBS Studio, and Canva, with a strong command of seamless editing, live streaming, sound design, and social media strategy.",
-  
-  "about_p2": "As a proactive team facilitator and collaborator, I'm recognized for leading community events and driving engagement through data-informed content strategies. I thrive on bringing ideas to life and connecting with audiences in meaningful ways.",
-
-  "resumeUrl": "/assets/resume.pdf", 
+{
+  "name": "Kalkidan Birhanu",
+  "headline": "Visual Storyteller & Digital Strategist",
+  "email": "bkalkidan982@gmail.com",
+  "resumeUrl": "/assets/resume.pdf",
   "socialLinks": [
-    { "name": "Email", "url": "mailto:bkalkidan982@gmail.com" },
-    { "name": "YouTube", "url": "https://www.youtube.com/@Kalkidan_Birhanu-s7r" },
-    { "name": "Drive Link ", "url": "https://drive.google.com/drive/folders/1GHCxkJ0SF7p8dnzQt4QJluaw2ke0hqEs?usp=sharing" },
-    { "name": "LinkedIn", "url": "https://www.linkedin.com/in/kalkidan-birhanu/" }
+    {
+      "name": "LinkedIn",
+      "url": "https://www.linkedin.com/in/kalkidan-birhanu/",
+      "type": "linkedin"
+    },
+    {
+      "name": "Telegram",
+      "url": "https://t.me/yourusername",
+      "type": "telegram"
+    },
+    {
+      "name": "YouTube",
+      "url": "https://www.youtube.com/@Kalkidan_Birhanu-s7r",
+      "type": "youtube"
+    }
   ],
-  "youtube": {
-      "channelName": "Kalkidan Birhanu",
-      "channelUrl": "https://www.youtube.com/@Kalkidan_Birhanu-s7r",
-      "logo": "/assets/Youtube Logo.png",
-      "subscribers": "9 subscribers"
-  }
+  "experience": [
+    {
+      "id": 1,
+      "role": "Graphic Designer",
+      "company": "SkillBridge",
+      "date": "June 2025 - Present",
+      "description": "Leading visual identity for one of Ethiopia's top educational platforms."
+    },
+    {
+      "id": 2,
+      "role": "Team Lead & Facilitator",
+      "company": "Emagn",
+      "date": "June 2024 - Present",
+      "description": "Facilitating team progress and managing creative workflows."
+    },
+    {
+      "id": 3,
+      "role": "Video Editor",
+      "company": "Freelance",
+      "date": "2023 - Present",
+      "description": "Delivering high-retention edits for international clients and YouTubers."
+    },
+    {
+      "id": 4,
+      "role": "Graphic Designer",
+      "company": "A2SV | Africa to Silicon Valley",
+      "date": "March 2025 - 2023",
+      "description": "Creating compelling social content for a pan-African tech community."
+    }
+  ],
+  "tools": [
+    {
+      "name": "Premiere Pro",
+      "icon": "premiere"
+    },
+    {
+      "name": "After Effects",
+      "icon": "aftereffects"
+    },
+    {
+      "name": "Photoshop",
+      "icon": "photoshop"
+    },
+    {
+      "name": "Illustrator",
+      "icon": "illustrator"
+    },
+    {
+      "name": "Canva",
+      "icon": "canva"
+    },
+    {
+      "name": "CapCut",
+      "icon": "capcut"
+    }
+  ],
+  "services": [
+    {
+      "title": "Video Editing",
+      "desc": "High-retention cuts, color grading, and sound design."
+    },
+    {
+      "title": "Graphic Design",
+      "desc": "Thumbnails, posters, and brand identity systems."
+    },
+    {
+      "title": "Social Strategy",
+      "desc": "Content calendars and engagement growth."
+    }
+  ]
 }

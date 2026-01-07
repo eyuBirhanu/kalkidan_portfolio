@@ -13,45 +13,43 @@ export default {
         Oxanium: '"Oxanium", sans-serif',
       },
       colors: {
-        "accent-color": "hsl(47, 100%, 50%)",
+        "accent-color": "hsl(47, 100%, 50%)", // The Yellow
         "primary-white": "hsl(0, 0%, 90%)",
         paragraph: "hsl(0, 0%, 70%)",
-        "light-black": "hsl(0, 0%, 5%)",
+        "light-black": "hsl(0, 0%, 5%)", // Very dark grey
         "dark-yellow": "hsla(45, 100%, 50%, 0.8)",
         "dark-gray": "hsl(0, 0%, 28%)",
       },
       backgroundImage: {
         "home-mobile-hero": "url('/images/mobile/mobile-hero.png')",
         "home-desktop-hero": "url('/images/desktop/Hero-desktop.png')",
-        "contact-desktop-hero": "url('/images/desktop/contact-hero.png')",
-        "contact-mobile-hero": "url('/images/mobile/mobile-contact-hero.png')",
-        "work-desktop-hero": "url('/images/desktop/works-desktop-hero.png')", // Corrected from contact-hero
-        "work-mobile-hero": "url('/images/mobile/mobile-works-hero.png')",
+        "grid-pattern": "linear-gradient(to right, rgba(255, 255, 255, 0.05) 1px, transparent 1px), linear-gradient(to bottom, rgba(255, 255, 255, 0.05) 1px, transparent 1px)",
       },
-      width: {
-        "9/20": "45%",
-        98: "25rem",
-        100: "30rem",
-      },
-      height: {
-        46: "11.25rem",
-        68: "16.875rem",
-        58: "14.063rem",
-        100: "25rem",
-      },
-      minWidth: {
-        40: "10rem", // 160px
-        50: "12.5rem", // 200px
-        60: "15rem", // 240px
+      backgroundSize: {
+        "grid-pattern": "40px 40px",
       },
       keyframes: {
+        marquee: {
+          "0%": { transform: "translateX(0)" },
+          "100%": { transform: "translateX(-50%)" }, // Move half way (since we duplicate list)
+        },
         shrink: {
           "0%": { width: "100%" },
           "100%": { width: "0%" },
         },
+        shimmer: {
+          "100%": { transform: "translateX(100%)" },
+        },
+        "fade-in-up": {
+          "0%": { opacity: "0", transform: "translateY(20px)" },
+          "100%": { opacity: "1", transform: "translateY(0)" },
+        },
       },
       animation: {
+        marquee: "marquee 25s linear infinite",
         shrink: "shrink 5s linear forwards",
+        shimmer: "shimmer 2s linear infinite",
+        "fade-in-up": "fade-in-up 0.5s ease-out forwards",
       },
     },
   },

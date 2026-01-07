@@ -12,6 +12,7 @@ import RootLayout from "./layouts/RootLayout";
 import HomePage from "./pages/HomePage";
 import WorksPage from "./pages/WorksPage";
 import ContactPage from "./pages/ContactPage";
+import UploadPage from "./pages/UploadPage";
 
 const router = createBrowserRouter(
   createRoutesFromElements(
@@ -19,6 +20,7 @@ const router = createBrowserRouter(
       <Route index element={<HomePage />} />
       <Route path="works" element={<WorksPage />} />
       <Route path="contact" element={<ContactPage />} />
+      <Route path="upload" element={<UploadPage />} />
     </Route>
   )
 );
