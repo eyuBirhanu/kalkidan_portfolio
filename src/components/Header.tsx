@@ -47,7 +47,7 @@ const NavLinks = ({ closeMenu, isMobile = false }: NavLinksProps) => {
           <span className="absolute -bottom-1 left-0 w-0 h-[2px] bg-accent-color transition-all duration-300 group-hover:w-full"></span>
         )}
       </NavLink>
-      <NavLink
+      {/* <NavLink
         to="/upload"
         onClick={closeMenu}
         className={({ isActive }) =>
@@ -58,7 +58,7 @@ const NavLinks = ({ closeMenu, isMobile = false }: NavLinksProps) => {
         {!isMobile && (
           <span className="absolute -bottom-1 left-0 w-0 h-[2px] bg-accent-color transition-all duration-300 group-hover:w-full"></span>
         )}
-      </NavLink>
+      </NavLink> */}
 
       {/* Contact is special: It looks like a button on Desktop */}
       <NavLink

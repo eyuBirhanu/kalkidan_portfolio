@@ -2,33 +2,33 @@
   {
     "id": "vid-1",
     "type": "video",
-    "title": "Ahadu | Brand Commercial",
+    "title": "Cinematic Intro | Editing Skill Display ✂️",
     "client": "Ahadu",
-    "description": "A high-energy commercial showcasing the new line.",
-    "thumbnailUrl": "https://img.youtube.com/vi/dQw4w9WgXcQ/hqdefault.jpg",
-    "videoUrl": "https://www.youtube.com/embed/dQw4w9WgXcQ",
+    "description": "A short cinematic intro created and edited to showcase video editing skills.",
+    "thumbnailUrl": "https://youtu.be/DeN55E3YwK8?si=plnasKTzBjlVnwpt",
+    "videoUrl": "https://youtu.be/DeN55E3YwK8?si=plnasKTzBjlVnwpt",
     "format": "widescreen",
     "tags": [
-      "Commercial",
-      "Promo",
-      "Editing"
+      "CinematicIntro",
+      "MotionDesign",
+      "Intro"
     ],
-    "date": "2024-12-01"
+    "date": "2025-07-03"
   },
   {
     "id": "img-1",
     "type": "graphic",
-    "title": "SkillBridge Event Poster",
-    "client": "SkillBridge",
-    "description": "Promotional poster for the annual hackathon.",
-    "thumbnailUrl": "https://placehold.co/600x800/1a1a1a/FFF?text=Poster+Thumb",
-    "fullImageUrl": "https://placehold.co/1200x1600/1a1a1a/FFF?text=Poster+Full",
+    "title": "Happy new Year poster",
+    "client": "RateEat",
+    "description": "Celebrating the new year with RateEat",
+    "thumbnailUrl": "https://res.cloudinary.com/dvtivt5vf/image/upload/v1767824698/1_vkp5vn.png",
+    "fullImageUrl": "https://res.cloudinary.com/dvtivt5vf/image/upload/v1767824698/1_vkp5vn.png",
     "tags": [
       "Poster",
       "Branding",
       "Print"
     ],
-    "date": "2024-11-15"
+    "date": "2026-01-01"
   },
   {
     "id": "soc-1",
@@ -50,32 +50,200 @@
   {
     "id": "vid-2",
     "type": "video",
-    "title": "Fashion Week Reels",
+    "title": "Greed Grows Quieter | A Darker Chapter in the Poetic Journey",
     "client": "KAF Productions",
-    "description": "Fast-paced vertical edits for Instagram Reels.",
-    "thumbnailUrl": "https://placehold.co/400x711/2a2a2a/FFF?text=Reel+Thumb",
-    "videoUrl": "https://www.youtube.com/embed/dQw4w9WgXcQ",
-    "format": "portrait",
+    "description": "A poem about greed and its consequences.",
+    "thumbnailUrl": "https://youtu.be/pCV3evS6W2M?si=qERPFqJ6EGfy-Umb",
+    "videoUrl": "https://youtu.be/pCV3evS6W2M?si=qERPFqJ6EGfy-Umb",
+    "format": "widescreen",
     "tags": [
-      "Reels",
-      "Fashion",
-      "Vertical"
+      "GreedPoetry",
+      "PoetryFilm",
+      "KalkidanBirhanu",
+      "DarkPoetry"
     ],
-    "date": "2024-09-20"
+    "date": "2025-07-04"
   },
   {
     "id": "img-2",
     "type": "graphic",
-    "title": "A2SV Logo Refresh",
-    "client": "A2SV",
-    "description": "Modernizing the brand identity for digital platforms.",
-    "thumbnailUrl": "https://placehold.co/600x400/333/FFF?text=Logo+Design",
-    "fullImageUrl": "https://placehold.co/1200x800/333/FFF?text=Logo+Full",
+    "title": "Skill Bridge 2026 celebration poster",
+    "client": "Skill Bridge",
+    "description": "A poster for Skill Bridge 2026 celebration.",
+    "thumbnailUrl": "https://res.cloudinary.com/dvtivt5vf/image/upload/v1767824695/3_ql3wzr.png",
+    "fullImageUrl": "https://res.cloudinary.com/dvtivt5vf/image/upload/v1767824695/3_ql3wzr.png",
     "tags": [
-      "Logo",
-      "Identity",
-      "Vector"
+      "Poster",
+      "celebration",
+      "skillBridge"
     ],
-    "date": "2024-08-05"
+    "date": "2026-01-01"
+  },
+  {
+    "id": "soc-2",
+    "type": "social",
+    "title": "Efoy Educational Series",
+    "client": "Efoy",
+    "description": "Managed a 3-month educational campaign on Telegram reaching 5k+ parents.",
+    "thumbnailUrl": "https://placehold.co/600x600/0088cc/FFF?text=Telegram+Campaign",
+    "platform": "Telegram",
+    "link": "https://t.me/example",
+    "stats": "5.2k Reach | +20% Engagement",
+    "tags": [
+      "Social Media",
+      "Strategy",
+      "Education"
+    ],
+    "date": "2024-10-10"
+  },
+  {
+    "id": "img-3",
+    "type": "graphic",
+    "title": "Adot New Feature",
+    "client": "Adot",
+    "description": "A poster for Adot new feature.",
+    "thumbnailUrl": "https://res.cloudinary.com/dvtivt5vf/image/upload/v1767824693/Adot_New_feature_kal_i0dkle.png",
+    "fullImageUrl": "https://res.cloudinary.com/dvtivt5vf/image/upload/v1767824693/Adot_New_feature_kal_i0dkle.png",
+    "tags": [
+      "Poster",
+      "newFeature",
+      "Adot"
+    ],
+    "date": "2026-01-01"
+  },
+  {
+    "id": "img-4",
+    "type": "graphic",
+    "title": "Afrochat Graphics",
+    "client": "Afrochat",
+    "description": "Afrochat Graphics",
+    "thumbnailUrl": "https://res.cloudinary.com/dvtivt5vf/image/upload/v1767824693/Afrochat_Graphics_July_2_knbuhu.png",
+    "fullImageUrl": "https://res.cloudinary.com/dvtivt5vf/image/upload/v1767824693/Afrochat_Graphics_July_2_knbuhu.png",
+    "tags": [
+      "Poster",
+      "Graphics",
+      "Afrochat"
+    ],
+    "date": "2025-07-02"
+  },
+  {
+    "id": "img-5",
+    "type": "graphic",
+    "title": "Akil Oct",
+    "client": "Akil",
+    "description": "Akil Oct",
+    "thumbnailUrl": "https://res.cloudinary.com/dvtivt5vf/image/upload/v1767824692/Akil_oct_gmbzqv.png",
+    "fullImageUrl": "https://res.cloudinary.com/dvtivt5vf/image/upload/v1767824692/Akil_oct_gmbzqv.png",
+    "tags": [
+      "Poster",
+      "Graphics",
+      "Akil"
+    ],
+    "date": "2025-10-02"
+  },
+  {
+    "id": "img-6",
+    "type": "graphic",
+    "title": "Global Talent Map",
+    "client": "Eskalate",
+    "description": "Global Talent Map",
+    "thumbnailUrl": "https://res.cloudinary.com/dvtivt5vf/image/upload/v1767824690/Global_talent_map_u9lx1j.png",
+    "fullImageUrl": "https://res.cloudinary.com/dvtivt5vf/image/upload/v1767824690/Global_talent_map_u9lx1j.png",
+    "tags": [
+      "Poster",
+      "Graphics",
+      "Eskalate"
+    ],
+    "date": "2025-10-02"
+  },
+  {
+    "id": "img-7",
+    "type": "graphic",
+    "title": "Black Circle Icon Business Logo",
+    "client": "Hulu Store",
+    "description": "Black Circle Icon Business Logo",
+    "thumbnailUrl": "https://res.cloudinary.com/dvtivt5vf/image/upload/v1767824687/Black_Circle_Icon_Business_Logo_w4oezs.png",
+    "fullImageUrl": "https://res.cloudinary.com/dvtivt5vf/image/upload/v1767824687/Black_Circle_Icon_Business_Logo_w4oezs.png",
+    "tags": [
+      "Poster",
+      "Graphics",
+      "Hulu Store"
+    ],
+    "date": "2025-09-02"
+  },
+  {
+    "id": "img-8",
+    "type": "graphic",
+    "title": "Grace Africa",
+    "client": "Grace Africa",
+    "description": "Grace Africa",
+    "thumbnailUrl": "https://res.cloudinary.com/dvtivt5vf/image/upload/v1767824684/1_1_dce1qs.png",
+    "fullImageUrl": "https://res.cloudinary.com/dvtivt5vf/image/upload/v1767824684/1_1_dce1qs.png",
+    "tags": [
+      "Poster",
+      "Graphics",
+      "Grace Africa"
+    ],
+    "date": "2025-08-10"
+  },
+  {
+    "id": "img-9",
+    "type": "graphic",
+    "title": "Efoy",
+    "client": "Efoy",
+    "description": "Efoy",
+    "thumbnailUrl": "https://res.cloudinary.com/dvtivt5vf/image/upload/v1767824683/22_lktpy1.png",
+    "fullImageUrl": "https://res.cloudinary.com/dvtivt5vf/image/upload/v1767824683/22_lktpy1.png",
+    "tags": [
+      "Poster",
+      "Graphics",
+      "Efoy"
+    ],
+    "date": "2025-08-10"
+  },
+  {
+    "id": "img-10",
+    "type": "graphic",
+    "title": "Yemuya Weg",
+    "client": "Yemuya Weg",
+    "description": "Yemuya Weg",
+    "thumbnailUrl": "https://res.cloudinary.com/dvtivt5vf/image/upload/v1767824675/15_vc721w.png",
+    "fullImageUrl": "https://res.cloudinary.com/dvtivt5vf/image/upload/v1767824683/22_lktpy1.png",
+    "tags": [
+      "Poster",
+      "Graphics",
+      "Yemuya Weg"
+    ],
+    "date": "2025-05-10"
+  },
+  {
+    "id": "img-11",
+    "type": "graphic",
+    "title": "Afrochat Graphics",
+    "client": "Afrochat",
+    "description": "Afrochat Graphics",
+    "thumbnailUrl": "https://res.cloudinary.com/dvtivt5vf/image/upload/v1767824672/Afrochat_Graphics_July_lyqgy1.png",
+    "fullImageUrl": "https://res.cloudinary.com/dvtivt5vf/image/upload/v1767824672/Afrochat_Graphics_July_lyqgy1.png",
+    "tags": [
+      "Poster",
+      "Graphics",
+      "Afrochat"
+    ],
+    "date": "2025-07-10"
+  },
+  {
+    "id": "img-12",
+    "type": "graphic",
+    "title": "Blue Modern Social Media Marketing Instagram Post",
+    "client": "Alta Counselling",
+    "description": "Blue Modern Social Media Marketing Instagram Post",
+    "thumbnailUrl": "https://res.cloudinary.com/dvtivt5vf/image/upload/v1767824674/Copy_of_Copy_of_Blue_Modern_Social_Media_Marketing_Instagram_Post_ozugiw.jpg",
+    "fullImageUrl": "https://res.cloudinary.com/dvtivt5vf/image/upload/v1767824674/Copy_of_Copy_of_Blue_Modern_Social_Media_Marketing_Instagram_Post_ozugiw.jpg",
+    "tags": [
+      "Poster",
+      "Graphics",
+      "Alta Counselling"
+    ],
+    "date": "2025-07-10"
   }
 ]

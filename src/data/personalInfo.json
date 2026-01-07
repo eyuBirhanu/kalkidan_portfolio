@@ -26,46 +26,127 @@
       "role": "Graphic Designer",
       "company": "SkillBridge",
       "date": "June 2025 - Present",
-      "description": "Leading visual identity for one of Ethiopia's top educational platforms."
+      "description": "Designing engaging visual content to help one of Ethiopia’s leading platforms expand its reach and drive app adoption."
     },
     {
       "id": 2,
-      "role": "Team Lead & Facilitator",
-      "company": "Emagn",
-      "date": "June 2024 - Present",
-      "description": "Facilitating team progress and managing creative workflows."
+      "role": "Graphic Designer & Content Creator",
+      "company": "AKIL",
+      "date": "April 2025 - Present",
+      "description": "Creating visual and written content to strengthen brand presence and audience engagement across digital platforms."
     },
     {
       "id": 3,
-      "role": "Video Editor",
-      "company": "Freelance",
-      "date": "2023 - Present",
-      "description": "Delivering high-retention edits for international clients and YouTubers."
+      "role": "Graphic Designer",
+      "company": "RateEat",
+      "date": "April 2025 - Present",
+      "description": "Producing social media graphics and promotional content to support product visibility and user growth."
     },
     {
       "id": 4,
       "role": "Graphic Designer",
       "company": "A2SV | Africa to Silicon Valley",
-      "date": "March 2025 - 2023",
-      "description": "Creating compelling social content for a pan-African tech community."
+      "date": "March 2025 - Present",
+      "description": "Designing creative assets and social media content for a pan-African tech and talent development community."
+    },
+    {
+      "id": 5,
+      "role": "Graphic Designer",
+      "company": "AfroChat",
+      "date": "July 2024 - Present",
+      "description": "Developing consistent visual content to enhance brand communication and community engagement."
+    },
+    {
+      "id": 6,
+      "role": "Team Lead",
+      "company": "Emagn",
+      "date": "June 2024 - Present",
+      "description": "Leading a creative team, coordinating workflows, tracking progress, and supporting content production."
+    },
+    {
+      "id": 7,
+      "role": "Video Editor",
+      "company": "Emagn",
+      "date": "June 2024 - Present",
+      "description": "Editing and producing video content to support marketing, communication, and internal initiatives."
+    },
+    {
+      "id": 8,
+      "role": "Graphic Designer",
+      "company": "Adot",
+      "date": "April 2025 - January 2026",
+      "description": "Created marketing and social media graphics for Cordev under the A2SV initiative."
+    },
+    {
+      "id": 9,
+      "role": "Social Media Manager",
+      "company": "Efoy Nanny and Housekeeping Training Center",
+      "date": "May 2025 - October 2025",
+      "description": "Managed social media accounts, designed graphics, edited videos, and shared educational content focused on proper childcare."
+    },
+    {
+      "id": 10,
+      "role": "Volunteer Graphic Designer",
+      "company": "YeMuyaWeg",
+      "date": "March 2025 - July 2025",
+      "description": "Designed social media graphics to support community initiatives and awareness campaigns."
+    },
+    {
+      "id": 11,
+      "role": "Graphic Designer",
+      "company": "Dime",
+      "date": "July 2025 - August 2025",
+      "description": "Produced short-term visual content for marketing and promotional use."
+    },
+    {
+      "id": 12,
+      "role": "Content Creator",
+      "company": "Abilitax",
+      "date": "January 2024 - June 2024",
+      "description": "Created digital content to support brand communication and online engagement."
+    },
+    {
+      "id": 13,
+      "role": "Video Editor",
+      "company": "Abilitax",
+      "date": "December 2023 - June 2024",
+      "description": "Edited promotional and informational videos to improve content quality and audience retention."
+    },
+    {
+      "id": 14,
+      "role": "Video Editor Intern",
+      "company": "Paramount Students",
+      "date": "January 2024 - April 2024",
+      "description": "Worked within the creative department editing video content and supporting media production."
+    },
+    {
+      "id": 15,
+      "role": "Freelance Video Editor",
+      "company": "Freelance",
+      "date": "September 2023 - November 2023",
+      "description": "Delivered client-focused video edits for online content, marketing, and social media platforms."
     }
   ],
   "tools": [
     {
-      "name": "Premiere Pro",
+      "name": "Adobe Premiere Pro",
       "icon": "premiere"
     },
     {
-      "name": "After Effects",
+      "name": "Adobe After Effects",
       "icon": "aftereffects"
     },
     {
-      "name": "Photoshop",
+      "name": "Adobe Photoshop",
       "icon": "photoshop"
     },
     {
-      "name": "Illustrator",
+      "name": "Adobe Illustrator",
       "icon": "illustrator"
+    },
+    {
+      "name": "Figma",
+      "icon": "figma"
     },
     {
       "name": "Canva",
